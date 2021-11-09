@@ -27,7 +27,7 @@ function mayoriaDeEdad(edad) {
     //Determinar si la persona según su edad puede ingresar a un evento.
     //Si tiene 18 años ó más, devolver --> "Allowed"
     //Si es menor, devolver --> "Not allowed"
-    if (edad > 18) {
+    if (edad > 17) {
         return "Allowed";
     } else {
         return "Not allowed";
@@ -84,12 +84,14 @@ function colors(color) {
     //Caso default: devuelve --> "Color not found"
     //Usar el statement Switch.
     switch (color) {
-        case 'Blue':
+        case 'blue':
             return ("This is blue");
         case 'red':
             return ('This is red');
         case 'green':
             return ('This is green');
+        case 'orange':
+            return ('This is orange');
         default:
             return ('Color not found');
     }
@@ -139,10 +141,10 @@ function fizzBuzz(numero) {
     // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
     // De lo contrario, devuelve el numero
     if (numero % 3 === 0 || numero % 5 === 0) {
-        if (numero % 3 === 0) {
+        if (numero % 3 === 0 && numero % 5 !== 0) {
             return "fizz";
         }
-        if (numero % 5 === 0) {
+        if (numero % 5 === 0 && numero % 3 !== 0) {
             return "buzz";
         }
         if (numero % 3 === 0 && numero % 5 === 0) {
@@ -164,19 +166,16 @@ function operadoresLogicos(num1, num2, num3) {
     //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
     //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
 
-    if (num1 > num2 && num1 > num3 && num1 > 0) {
-        return "Número 1 es mayor y positivo";
-    }
-
-    if (num1 < 0 || num2 < 0 || num3 < 0) {
-        return "Hay negativos";
-    }
-
     if (num1 === 0 || num2 === 0 || num3 === 0) {
         return "Error";
-    }
-    if (num3 > num1 && num3 > num2) {
+    } else if (num1 > num2 || num1 > num3 || num1 > 0) {
+        return "Numero 1 es mayor y positivo";
+    } else if (num1 < 0 || num2 < 0 || num3 < 0) {
+        return "Hay negativos";
+    } else if (num3 > num1 && num3 > num2) {
         return num3 + 1;
+    } else {
+        return false;
     }
 }
 
@@ -186,6 +185,35 @@ function esPrimo(numero) {
     // Pista: un número primo solo es divisible por sí mismo y por 1
     // Pista 2: Puedes resolverlo usando un bucle `for`
     // Nota: Los números 0 y 1 NO son considerados números primos
+
+    var i = 2;
+    var primo = true;
+
+    if (numero > 2) {
+        while (i < numero) {
+
+            if (numero % i == 0) {
+                primo = false;
+            }
+
+            i++;
+
+        }
+
+
+
+        if (primo === true) {
+            return true;
+        } else {
+            return false;
+        }
+
+    } else {
+        return false;
+    }
+
+
+
 }
 
 function esVerdadero(valor) {
@@ -204,12 +232,21 @@ function tablaDelSeis() {
     //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
     //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
     //Escribe tu código aquí   
-
+    const tabla = [];
+    for (let i = 0; i < 11; i++) {
+        tabla.push(i * 6);
+    }
+    return tabla;
 }
 
 function tieneTresDigitos(numero) {
     //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
-    //Escribe tu código aquí
+    //Escribe tu código aquí 
+    if (numero.toString().length === 3) {
+        return true;
+    } else {
+        return false;
+    }
 
 }
 
@@ -217,6 +254,16 @@ function doWhile(numero) {
     //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
     //Retornar el valor final.
     //Usar el bucle do ... while.
+    let acum = numero;
+    let i = 0;
+
+    do {
+        i = i + 1;
+        acum = acum + 5;
+    } while (i < 8);
+
+    return acum;
+
 }
 
 
