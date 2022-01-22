@@ -55,7 +55,7 @@ describe('invocarMetodo(object, method)', function() {
     expect(object.x).toBe(1);
   });
 });
-
+/*
 describe('multiplicarNumeroDesconocidoPorCinco(mysteryNumberObject)', function() {
   it('should return the mysteryNumber property multiplied by five', function() {
     const mysteryBox = {
@@ -230,3 +230,6 @@ describe('agregarMetodoCalculoDescuento(storeItem)', function() {
     expect(agregarMetodoCalculoDescuento(storeItem2).calcularPrecioDescuento()).toBe(2.5);
   });
 });
+
+
+*/

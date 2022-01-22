@@ -1,6 +1,7 @@
 // No cambies los nombres de las funciones.
 
 function crearGato(nombre, edad) {
+<<<<<<< HEAD
     // Crear un nuevo objeto con la propiedad "nombre" y el valor definido como el argumento "nombre".
     // Agrega una propiedad al objeto con el nombre "edad" y usa el valor definido en el argumento "edad"
     // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
@@ -10,10 +11,25 @@ function crearGato(nombre, edad) {
 
 
 
+=======
+  // Crear un nuevo objeto con la propiedad "nombre" y el valor definido como el argumento "nombre".
+  // Agrega una propiedad al objeto con el nombre "edad" y usa el valor definido en el argumento "edad"
+  // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
+  // Devuelve el objeto
+  // Tu código:
+  var obj = {};
+  obj.nombre = nombre;
+  obj.edad = edad;
+  obj.meow = function() {
+    return "Meow!";
+  };
+  return obj;
+>>>>>>> fc0207cc0ac2e5572b18b68ed24a66f783b399e1
 }
 
 
 function agregarPropiedad(objeto, property) {
+<<<<<<< HEAD
     // Agrega una propiedad al objeto (argumento "objeto") con el valor `null`
     // Devuelve el objeto
     // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
@@ -25,6 +41,29 @@ function invocarMetodo(objeto, metodo) {
     // Invoca ese método
     // Nada necesita ser devuelto ("returned")
     // Tu código:
+=======
+  // Agrega una propiedad al objeto (argumento "objeto") con el valor `null`
+  // Devuelve el objeto
+  // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
+  // Tu código:
+  Object.defineProperty(objeto, property, {
+    value: null,
+    writable: true,
+    configurable: true,
+    enumerable: true
+  });
+return objeto;
+
+}
+
+function invocarMetodo(objeto, metodo) {
+  // "metodo" es una cadena que contiene el nombre de un método (funcion) en el objeto
+  // Invoca ese método
+  // Nada necesita ser devuelto ("returned")
+  // Tu código:
+
+  
+>>>>>>> fc0207cc0ac2e5572b18b68ed24a66f783b399e1
 }
 
 function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
