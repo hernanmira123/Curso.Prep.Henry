@@ -29,6 +29,17 @@ function agregarMetodoPrototype(Constructor) {
     // Agrega un método al Constructor del `prototype`
     // El método debe llamarse "saludar" y debe devolver la string "Hello World!"
     // Tu código:
+
+    Object.defineProperty(Constructor.prototype, "saludar", {
+        value: function() {
+            return "Hello World!";
+        },
+        writable: true,
+        configurable: true,
+        enumerable: true
+    });
+
+    return Constructor;
 }
 
 function agregarStringInvertida() {
@@ -37,6 +48,20 @@ function agregarStringInvertida() {
     // Ej: 'menem'.reverse() => menem
     // 'toni'.reverse() => 'inot'
     // Pista: Necesitarás usar "this" dentro de "reverse"
+    Object.defineProperty(String.prototype, "reverse", {
+        value: function() {
+            var newString = "";
+            for (var i = this.length - 1; i >= 0; i--) {
+                newString += this[i];
+            }
+            return newString;
+        },
+        writable: true,
+        configurable: true,
+        enumerable: true
+    });
+
+    //return String
 }
 
 // ---------------------------------------------------------------------------//
