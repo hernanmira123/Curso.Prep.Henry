@@ -24,9 +24,10 @@ ul {
 }
 
 #thirdDiv {
-    background-color: #232526;
+    background-color: #0a0008;
     padding: 50px;
-    border-radius: 1px;
+    border: 1px solid rgb(41, 1, 1);
+    border-radius: 5px;
     height: 600px;
     width: 500px;
     /* lo hago que se comporte como elemento de bloque
