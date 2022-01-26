@@ -1,0 +1,42 @@
+body {
+    background: rgb(4, 168, 198);
+    background-image: url("background.jpg");
+    color: white;
+    text-align: center;
+}
+
+a {
+    color: rgb(218, 231, 183);
+}
+
+img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    align-self: center;
+    margin-right: 40px;
+}
+
+#thirdDiv {
+    background-color: #232526;
+    padding: 50px;
+    border-radius: 1px;
+    height: 600px;
+    width: 500px;
+    /* lo hago que se comporte como elemento de bloque
+     y luego lo alineo como si fuera texto 
+     en el body*/
+    margin-top: 5px;
+    display: inline-block;
+}
+
+#spanId {
+    font-size: 18px;
+    margin: 50px;
+}
